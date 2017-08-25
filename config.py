@@ -1,0 +1,4 @@
+WTF_CSRF_ENABLED = True
+SECRET_KEY = 'MgfLbyis92aImbi89'
+
+OPENID_PROVIDERS = []

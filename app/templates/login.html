@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+</script>
+<div class="col s12">
+<h4>Log in</h4>
+
+    <form class="col s12" action="process" method="post" name="login">
+      <div class="row">
+        <div class="input-field col s4">
+        	{{ form.hidden_tag() }} {# Renders ALL hidden fields, including the CSRF #}
+			{{ form.username.label }} {{ form.username(size=20) }}
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+        	{{ form.email.label }} {{ form.passwd(class='email', size=25) }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+        	{{ form.passwd.label }} {{ form.passwd(class='passwd', size=16) }}
+        </div>
+      </div>
+      <div class="row">
+      	<p><a><input class="waves-effect blue btn" type="submit" value="Sign in"></a></p>
+		
+		or
+		<p><a class="waves-effect waves-light btn-large blue">create an account</a></p>
+        </div>
+      </div>
+
+    </form>
+    
+    
+	</div>
+
+{% endblock %}

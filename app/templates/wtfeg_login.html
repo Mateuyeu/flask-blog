@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST" action="/">
+  {{ form.hidden_tag() }} {# Renders ALL hidden fields, including the CSRF #}
+  {{ form.username.label }} {{ form.username(size=20) }}
+  {{ form.passwd.label }} {{ form.passwd(class='passwd', size=16) }}
+  <input type='submit' value='Go'>
+</form>
+
+{% endblock %}

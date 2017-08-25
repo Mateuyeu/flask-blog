@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<h1>Welcome</h1>
+
+
+	<div class="row">
+		<div class="col s6 center"><i class="medium material-icons">book</i></br>wiki</div>
+		<div class="col s6 center"><i class="medium material-icons">flash_on</i></br>Analyser</div>
+	</div>
+
+	<div class="row">
+			<div class="col s6">
+			{% for article in articles %}
+				<div>
+					<b>{% print(article.title) %}</b>
+					<i>{% print(article.author) %}</i>
+					</br>
+					{% print(article.content) %}
+				</div>
+				</br>
+			{% endfor %}
+			</div>
+      		<div class="col s6">Fusce nibh mauris, varius at vehicula id, dignissim vel turpis. Sed metus orci, commodo eu lacus sit amet, ornare consequat diam. Morbi ac suscipit magna, eget elementum quam. Fusce laoreet aliquam elit, et pulvinar elit faucibus bibendum. Aliquam quis sodales dolor. Maecenas in rhoncus nisi. Suspendisse ut diam a leo sodales gravida eu elementum erat</div>
+
+	</div>
+
+{%endblock %}
